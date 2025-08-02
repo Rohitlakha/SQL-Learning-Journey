@@ -90,4 +90,3 @@ SELECT
 
 FROM employee_sales;
 
-

@@ -54,3 +54,17 @@ SELECT new_id, new_cat,
     LEAD(new_id) OVER (ORDER BY new_id) AS "LEAD",
     LAG(new_id) OVER (ORDER BY new_id) AS "LAG"
 FROM text_data;
+
+-- 🔁 LEAD and LAG with an offset of 2 rows
+SELECT new_id, new_cat,
+    FIRST_VALUE(new_id) OVER (ORDER BY new_id) AS "FIRST_VALUE",
+    LAST_VALUE(new_id) OVER (ORDER BY new_id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "LAST_VALUE",
+    LEAD(new_id, 2) OVER (ORDER BY new_id) AS "LEAD_2",
+    LAG(new_id, 2) OVER (ORDER BY new_id) AS "LAG_2"
+FROM text_data;
+
+SELECT new_id,
+ LEAD(new_id, 2)  OVER( ORDER BY new_id) AS "LEAD_by2",
+ LAG(new_id, 2)  OVER( ORDER BY new_id) AS "LAG_by2"
+ FROM text_data
+
