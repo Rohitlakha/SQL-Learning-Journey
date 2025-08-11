@@ -4,7 +4,7 @@ Welcome to the **SQL Learning Journey** repository! This is a structured collect
 
 ---
 
-## 🔰 Levels Covered
+## 🔰 Levels Covere
 
 - **01_Basics**: Simple queries, filtering, sorting, and data types.
 - **02_Intermediate**: JOINs, subqueries, GROUP BY, and filtering.
